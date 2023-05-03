@@ -484,6 +484,11 @@ class View
         if (strlen($string) === 0) {
             return '';
         }
+
+        if ($args === null) {
+		    $args = [""];
+        }
+        
         $html = '';
         if (!isset($this->lang[$string])) {
             $html = '{' . $string . '}';
